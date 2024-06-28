@@ -17,6 +17,27 @@ The Coupon Generator is a versatile tool designed to simplify the creation and m
 2. Customize your coupon parameters such as format, expiration date, and discount details.
 3. Generate coupons and download them instantly or integrate them via API into your application.
 
+##Running Locally
+Steps:
+Download the Project:
+Clone or download the project repository from GitHub or its hosting platform.
+Navigate to Project Directory:
+
+Open your terminal or command prompt.
+Use the cd command to navigate to the directory where your HTML, CSS, and JavaScript files are located.
+Open in Text Editor:
+
+Open your preferred text editor and navigate to the project folder.
+Run the Project:
+
+Locate your HTML file (index.html).
+Right-click on the HTML file and select "Open with" to choose your preferred web browser.
+Alternatively, you can open the HTML file directly in your browser by double-clicking it.
+View the Website:
+
+Your default web browser will open and display the webpage as it would appear online.
+Interact with the features and functionalities of the application.
+
 ## Screenshots
 ![Screenshot 1](https://example.com/screenshot1.png)
 ![Screenshot 2](https://example.com/screenshot2.png)
