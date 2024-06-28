@@ -17,7 +17,7 @@ The Coupon Generator is a versatile tool designed to simplify the creation and m
 2. Customize your coupon parameters such as format, expiration date, and discount details.
 3. Generate coupons and download them instantly or integrate them via API into your application.
 
-##Running Locally
+## Running Locally
 Steps:
 Download the Project:
 Clone or download the project repository from GitHub or its hosting platform.
@@ -41,7 +41,7 @@ Interact with the features and functionalities of the application.
 ## Screenshots
 ![1](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/27252913-a413-4260-9324-f36aafe7d969)
 
-##Coupons Generated
+## Coupons Generated
 ---------------
 ![coupon (6)](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/5ed1387c-3326-4cf6-a18a-b86f512091c6)
 ![coupon (12)](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/7d3b537b-79dd-4ecc-bbce-802ae45ffcef)
