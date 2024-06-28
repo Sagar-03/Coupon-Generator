@@ -42,7 +42,9 @@ Interact with the features and functionalities of the application.
 ![1](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/27252913-a413-4260-9324-f36aafe7d969)
 
 ##Coupons Generated
-![Uploading coupon (12).png…]()
+![coupon (6)](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/5ed1387c-3326-4cf6-a18a-b86f512091c6)
+![coupon (12)](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/7d3b537b-79dd-4ecc-bbce-802ae45ffcef)
+
 
 
 
