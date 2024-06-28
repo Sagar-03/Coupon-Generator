@@ -39,7 +39,10 @@ Your default web browser will open and display the webpage as it would appear on
 Interact with the features and functionalities of the application.
 
 ## Screenshots
-![Screenshot 1](https://example.com/screenshot1.png)
-![Screenshot 2](https://example.com/screenshot2.png)
+![1](https://github.com/Sagar-03/Coupon-Generator/assets/146898741/27252913-a413-4260-9324-f36aafe7d969)
+
+##Coupons Generated
+![Uploading coupon (12).png…]()
+
 
 
