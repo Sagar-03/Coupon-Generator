@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Coupon Generator</h1>
-    <form id="coupon-form">
-        <label for="organization-name">Organization Name:</label>
-        <input type="text" id="organization-name" name="organization-name"><br><br>
-        <label for="discount-deal">Discount/Deal:</label>
-        <input type="text" id="discount-deal" name="discount-deal"><br><br>
-        <label for="expiry-date">Expiry Date:</label>
-        <input type="date" id="expiry-date" name="expiry-date"><br><br>
-        <button id="generate-coupon">Generate Coupon</button>
-    </form>
-    <div id="coupon-container">
-        <img id="coupon-image" src="" alt="Coupon Image">
-        <a id="download-coupon" href="#" download="coupon.png">Download Coupon</a>
+    <div class="container">
+        <h1>Coupon Generator</h1>
+        <form id="couponForm">
+            <label for="organizationName">Organization Name:</label>
+            <input type="text" id="organizationName" required>
+
+            <label for="discount">Discount/Deal Description:</label>
+            <input type="text" id="discount" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="date" id="expiry-date" required>
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" required>
+            
+            <div>
+                <button type="button" onclick="generateCoupon()">Generate Coupon</button>
+            </div>
+        </form>
+
+        <div class="coupon-preview" id="couponPreview">
+            <canvas id="couponCanvas"></canvas>
+        </div>
+
+        <button id="downloadButton" onclick="downloadCoupon()">Download Coupon</button>
     </div>
 
+    <script src="https://davidshimjs.github.io/qrcodejs/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
