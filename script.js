@@ -6,7 +6,6 @@ function generateCoupon() {
     const expiryDate = document.getElementById('expiry-date').value;
     const url = document.getElementById('url').value;
 
-   
     const container = document.querySelector('.coupon-preview');
     canvas.width = container.clientWidth;
     canvas.height = 280;
@@ -16,15 +15,12 @@ function generateCoupon() {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    
     ctx.fillStyle = 'white';
     ctx.font = '20px Arial';
     ctx.textAlign = 'center';
 
-    
     const lineHeight = 30;
     const startY = 40;
-
 
     ctx.fillText('Organization Name: ' + organizationName, canvas.width / 2, startY);
     ctx.fillText('Discount: ' + discount, canvas.width / 2, startY + lineHeight);
@@ -32,15 +28,14 @@ function generateCoupon() {
 
     const barcodeCanvas = document.createElement('canvas');
     JsBarcode(barcodeCanvas, '123456789012', { format: 'CODE128', displayValue: false });
-    
+
     const barcodeWidth = 160;
     const barcodeHeight = 40;
     const barcodeX = (canvas.width - barcodeWidth) / 2;
     const barcodeY = startY + lineHeight * 3 + 10;
-    
+
     ctx.drawImage(barcodeCanvas, barcodeX, barcodeY, barcodeWidth, barcodeHeight);
 
- 
     const qrCodeContainer = document.createElement('div');
     const qrCode = new QRCode(qrCodeContainer, {
         text: url,
@@ -48,23 +43,25 @@ function generateCoupon() {
         height: 80,
     });
 
-
-    qrCode._oDrawing._elImage.onload = () => {
+    const checkQRCodeLoad = setInterval(() => {
         const qrCodeImage = qrCodeContainer.querySelector('img');
-        const qrCodeSize = 80;
-        const qrCodeX = 10;
-        const qrCodeY = canvas.height - qrCodeSize - 30;
+        if (qrCodeImage && qrCodeImage.complete) {
+            clearInterval(checkQRCodeLoad);
+            const qrCodeSize = 80;
+            const qrCodeX = 10;
+            const qrCodeY = canvas.height - qrCodeSize - 30;
 
-        ctx.drawImage(qrCodeImage, qrCodeX, qrCodeY, qrCodeSize, qrCodeSize);
+            ctx.drawImage(qrCodeImage, qrCodeX, qrCodeY, qrCodeSize, qrCodeSize);
 
-        ctx.font = '14px Arial';
-        ctx.fillText('Visit our website', qrCodeX + qrCodeSize - 30, qrCodeY + qrCodeSize / 2 + 55);
+            ctx.font = '14px Arial';
+            ctx.fillText('Visit our website', qrCodeX + qrCodeSize - 30, qrCodeY + qrCodeSize / 2 + 55);
 
-        const downloadButton = document.getElementById('downloadButton');
-        downloadButton.addEventListener('click', () => {
-            downloadCoupon(canvas);
-        });
-    };
+            const downloadButton = document.getElementById('downloadButton');
+            downloadButton.addEventListener('click', () => {
+                downloadCoupon(canvas);
+            });
+        }
+    }, 100);
 }
 
 function generateRandomGradient(ctx, width, height) {
